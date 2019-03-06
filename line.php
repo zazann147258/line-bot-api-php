@@ -20,14 +20,18 @@ if ( sizeof($request_array['events']) > 0 )
    
    if( $event['message']['type'] == 'text' )
    {
-    $text = $event['message']['text'];
-    if($text == "อุณหภูมิตอนนี้"){
-      $temp = 27;
-      $reply_message = 'ขณะนี้อุณหภูมิที่ '.$temp.'°C องศาเซลเซียส';
-    }else if($text== "ตอนนี้อยู่ที่ไหน"){
-      $reply_message = 'อยู่ที่ห้องประชุมฯ ตึก 35 ชั้น3';
-    }else{
-     $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+		$text = $event['message']['text'];
+		
+		if(($text == "อุณหภูมิตอนนี้")||($text == "อุณหภูมิวันนี้")||($text == "อุณหภูมิ")){
+			$temp = 27;
+			$reply_message = 'ขณะนี้อุณหภูมิที่ '.$temp.'°C องศาเซลเซียส';
+		}
+		else if(($text== "ตอนนี้อยู่ที่ไหน")||($text== "ตอนนี้อยู่ไหน")||($text== "อยู่ที่ไหน")||($text== "อยู่ไหน")){
+			$reply_message = 'ขณะนี้อยู่ที่ห้องประชุมฯ ตึก 35 ชั้น3';
+		}
+	else
+	{
+		$reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
     }
    
    }
