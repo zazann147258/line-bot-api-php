@@ -22,7 +22,7 @@ if ( sizeof($request_array['events']) > 0 )
    {
 		$text = $event['message']['text'];
 		
-		if($text == "100"){			
+		if($text == "22"){			
 			$reply_message = 'ถูกหวย!!! ถูกหวย!!!';
 		}
 		else
