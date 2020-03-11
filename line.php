@@ -22,16 +22,12 @@ if ( sizeof($request_array['events']) > 0 )
    {
 		$text = $event['message']['text'];
 		
-		if(($text == "อุณหภูมิตอนนี้")||($text == "อุณหภูมิวันนี้")||($text == "อุณหภูมิ")){
-			$temp = 27;
-			$reply_message = 'ขณะนี้อุณหภูมิที่ '.$temp.'°C องศาเซลเซียส';
-		}
-		else if(($text== "ตอนนี้อยู่ที่ไหน")||($text== "ตอนนี้อยู่ไหน")||($text== "อยู่ที่ไหน")||($text== "อยู่ไหน")){
-			$reply_message = 'ขณะนี้อยู่ที่ห้องเรียน IF-9T09 ...!!!';
+		if($text == "100"){			
+			$reply_message = 'ถูกหวย!!! ถูกหวย!!!';
 		}
 		else
 		{
-			$reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
+			$reply_message = '('.$text.') ถูกหวยกิน!!';
     		}
    
    }
