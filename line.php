@@ -22,7 +22,7 @@ if ( sizeof($request_array['events']) > 0 )
    {
 		$text = $event['message']['text'];
 		   
-	   	if($text =="ชื่อ"){
+	   	if($text =="ชื่อ"||$text =="ชื่อไร"||$text =="ชื่อไรครับ"||$text =="ชื่อไรคะ"){
 		$reply_message = 'ชื่อของชั้น คือ HATARI ยังไงละ';
 		}
    }
