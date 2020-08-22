@@ -39,7 +39,7 @@ if ( sizeof($request_array['events']) > 0 )
      $obj = json_decode($result);
      
      $reply_message = $result;
-     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}.' '.'ยอดผู้รักษาหาย'.$obj->{'Recovered'}.'   รายงานโดย จักรรินทร์ ปิมแปง 61160172';
+     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}."/n".'ยอดผู้รักษาหาย'.$obj->{'Recovered'}."/n".'   รายงานโดย จักรรินทร์ ปิมแปง 61160172';
      	     
   		}
    }
