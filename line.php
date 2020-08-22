@@ -22,7 +22,7 @@ if ( sizeof($request_array['events']) > 0 )
    {
 		$text = $event['message']['text'];
 		   
-	   	if($text =="ชื่อ"||$text =="ชื่อไร"||$text =="ชื่อไรครับ"||$text =="ชื่อไรคะ"){
+	   	if($text =="ชื่อ"||$text =="ชื่ออะไร"||$text =="ชื่ออะไรครับ"||$text =="ชื่ออะไรคะ"){
 		$reply_message = 'ชื่อของชั้น คือ HATARI ยังไงละ';
 		}
 	      if($text == "สถานการณ์โควิดวันนี้" || $text == "covid19" || $text == "covid-19" || $text == "Covid-19"){
