@@ -42,6 +42,12 @@ if ( sizeof($request_array['events']) > 0 )
      $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}."\n".'ยอดผู้รักษาหาย'.$obj->{'Recovered'}."\n".'รายงานโดย จักรรินทร์ ปิมแปง 61160172';
      	     
   		}
+	   if($text =="CDMA"){
+		$reply_message = '+1,-3,-1,-1';
+		}
+	   
+	   
+	   
    }
    else
     $reply_message = 'ระบบได้รับ '.ucfirst($event['message']['type']).' ของคุณแล้ว';
