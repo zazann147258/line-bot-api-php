@@ -36,10 +36,10 @@ if ( sizeof($request_array['events']) > 0 )
  		   $result = curl_exec($ch);
  		   curl_close($ch);   
      
-     $obj = json_decode($result);
+    			 $obj = json_decode($result);
      
-     $reply_message = $result;
-     $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}."\n".'ยอดผู้รักษาหาย'.$obj->{'Recovered'}."\n".'รายงานโดย จักรรินทร์ ปิมแปง 61160172';
+   			  $reply_message = $result;
+  			   $reply_message = 'ติดเชื้อสะสม '. $obj->{'Confirmed'}."\n".'ยอดผู้รักษาหาย'.$obj->{'Recovered'}."\n".'รายงานโดย จักรรินทร์ ปิมแปง 61160172';
      	     
   		}
 	   if($text =="CDMA"){
@@ -48,7 +48,7 @@ if ( sizeof($request_array['events']) > 0 )
 	   if($text =="ผู้พัฒนา"){
 		$reply_message = 'นายจักรรินทร์ ปิมแปง 61160172';
 		}
-	   
+	  
 	   
    }
    else
