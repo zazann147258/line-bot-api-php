@@ -45,7 +45,9 @@ if ( sizeof($request_array['events']) > 0 )
 	   if($text =="CDMA"){
 		$reply_message = '+1,-3,-1,-1';
 		}
-	   
+	   if($text =="ผู้พัฒนา"){
+		$reply_message = 'นายจักรรินทร์ ปิมแปง 61160172';
+		}
 	   
 	   
    }
