@@ -48,7 +48,20 @@ if ( sizeof($request_array['events']) > 0 )
 	   if($text =="ผู้พัฒนา"){
 		$reply_message = 'นายจักรรินทร์ ปิมแปง 61160172';
 		}
-	  
+	  if($text == "@บอท ขอรหัสนิสิตของผู้พัฒนา ส่งไปที่ https://linebot.kantit.com/stuid.php"){
+		$url = 'https://linebot.kantit.com/stuid.php';
+   		  $ch = curl_init($url);
+  		   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+  		   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  		   curl_setopt($ch, CURLOPT_HTTPHEADER, $post_header);
+  		   curl_setopt($ch, CURLOPT_POSTFIELDS, $post_body);
+ 	 	   curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+ 		   $result = curl_exec($ch);
+ 		   curl_close($ch);   
+     
+    		$obj = json_decode($result);
+		   $reply_message = 'ผลการบันทึกข้อมูล'. $obj->{'status'}."\n".'และ'.$obj->{'data'}."\n"."OK".'รายงานโดย จักรรินทร์ ปิมแปง 61160172';
+		}
 	   
    }
    else
